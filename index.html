@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Tyll's Game Tier List 2024</title>
+    </head>
+    <body>
+        <h1 id="title">Meine Spiele 2024</h1>
+        <div id="board" class="containers">
+            <div class="row">
+                <div style="background-color:#FF3043" class="label">S</div>
+                <div class="games"></div>
+            </div>
+            <div class="row">
+                <div style="background-color:#FCA574" class="label">A</div>
+                <div class="games"></div>
+            </div>
+            <div class="row">
+                <div style="background-color:#D4D45E" class="label">B</div>
+                <div class="games"></div>
+            </div>
+            <div class="row">
+                <div style="background-color:#7D964C" class="label">C</div>
+                <div class="games"></div>
+            </div>
+            <div class="row">
+                <div style="background-color:#6BD5DA" class="label">D</div>
+                <div class="games"></div>
+            </div>
+            <div class="row">
+                <div style="background-color:#AD8DE0" class="label">F</div>
+                <div class="games"></div>
+            </div>
+            <div class="row">
+                <div style="background-color:#242424" class="label">DNF</div>
+                <div class="games"></div>
+            </div>
+        </div>
+        <div id="summary" class="containers" style="position: relative; display: none; overflow: hidden;">
+            <img id="summary-background" src="">
+            <h2 id="summary-title" style="margin-left:1vw; position: relative; z-index: 1; font-weight:bold;"></h2><br>
+            <p id="summary-text" style="margin-left: 5vw; position: relative; z-index: 1;"></p>
+        </div>
+	    <script src="src/gameFunctions.js"></script>
+		<script src="src/gameSetup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+
+body {
+  font-family: "Press Start 2P", system-ui;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: black;
+  color: white;
+}
+
+/* Tier list container */
+.containers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align everything to the left */
+  justify-content: space-between;
+  width: 80vw;
+  height: auto; /* Allow the container to expand based on content */
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center; /* Align label and games to the top */
+  width: 100%;
+  height: auto;
+  background-color: rgb(10, 10, 10);
+  color: black;
+  justify-content: flex-start;
+  margin-bottom: 15px; /* Adds space between tiers */
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px; /* Fixed width for consistency */
+  height: 90px;
+  margin-right: 10px; /* Add space between the label and the games */
+  color: white;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+.games {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Ensure no vertical overflow */
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+  background-color: rgb(10, 10, 10);
+  color: black;
+  margin-left: 5px; /* Adds space between cards */
+  margin-right: 5px;
+  box-sizing: border-box; /* Ensures consistent sizing with margins */
+}
+
+img {
+  border-radius: 5px;
+  height: 100%;
+}
+
+#summary {
+  min-height: 400px;
+  height: auto;
+  margin-bottom: 200px;
+}
+
+#summary-background {
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  object-fit: cover;
+  width: 100%; /* Adjust size as needed */
+  height: auto;
+  opacity: 0.8;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 75%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 75%);
+}
+
+#summary-title{
+  background-color: rgb(10, 10, 10, 0.5);
+  line-height:150%;
+  padding:1%;
+}
+
+
+#summary-text{
+  background-color: rgb(10, 10, 10, 0.5);
+  line-height:150%;
+  padding:1%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1#title {
+    text-align: center;
+    font-size: 2rem; /* Make the title responsive */
+    margin-bottom: 20px;
+  }
+
+  .containers {
+    width: 90vw; /* Adjust container width for mobile */
+    height: auto; /* Let it expand as needed */
+  }
+
+  .label {
+    min-width:70px;
+    width: 70px; /* Adjust the label size */
+    height: 70px; /* Adjust the height for better visibility */
+  }
+
+  .card {
+    width: 70px; /* Adjust card size for mobile */
+    height: 70px; /* Ensure cards remain square */
+  }
+
+  #summary {
+    margin-top: 20px; /* Ensure the summary stays below the tier list */
+    min-height: 200px;
+  }
+
+  #summary img {
+    width: 100%;
+    height: auto; /* Allow the summary background to scale properly */
+  }
+}
+
